@@ -22,7 +22,7 @@ const Header = ({ siteTitle }) => (
       <img width="100px" height="100px"
       src="//www-league.nhlstatic.com/images/logos/league-dark/133-flat.svg" alt="NHL"></img>
       </Link>
-      <h1 class="title" style={{ margin: 0 }}>
+      <h1 className="title" style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
