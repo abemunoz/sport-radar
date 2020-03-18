@@ -8,7 +8,7 @@ exports.createPages = async ({ actions: { createPage } }) => {
     data: { teams },
   } = await get(`teams`)
   const eastern = {
-    name: "Eastern",
+    name: "Eastern Conference",
     id: 6,
     divisions: {
       atlantic: {
@@ -24,7 +24,7 @@ exports.createPages = async ({ actions: { createPage } }) => {
     },
   }
   const western = {
-    name: "Western",
+    name: "Western Conference",
     id: 5,
     divisions: {
       central: {

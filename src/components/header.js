@@ -6,7 +6,7 @@ const Header = ({ siteTitle }) => (
   <header
     style={{
       background: `#000000`,
-      marginBottom: `1.45rem`,
+      marginBottom: `1rem`,
     }}
   >
     <div
@@ -14,7 +14,7 @@ const Header = ({ siteTitle }) => (
         margin: `0 auto`,
         padding: `1.45rem 1.0875rem`,
         display: `flex`,
-        justifyContent: `space-between`,
+        justifyContent: `flex-start`,
         alignItems: `center`,
       }}
     >
@@ -24,6 +24,11 @@ const Header = ({ siteTitle }) => (
           height="100px"
           src="//www-league.nhlstatic.com/images/logos/league-dark/133-flat.svg"
           alt="NHL"
+          style={{
+            color: `white`,
+            textDecoration: `none`,
+            paddingRight: `15px`
+          }}
         ></img>
       </Link>
       <h1 className="title" style={{ margin: 0 }}>
@@ -37,7 +42,6 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
-      <input></input>
     </div>
   </header>
 )

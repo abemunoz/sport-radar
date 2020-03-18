@@ -1,0 +1,14 @@
+@media only screen and (max-width: 575px) { 
+    .home .division {
+        margin-left: 0px;
+    }
+    .home {
+        padding: 5% 15%;
+    }
+}
+
+@media only screen and (max-width: 955px) { 
+    .home {
+        padding: 0 5%;
+    }
+}

@@ -1,5 +1,5 @@
 html {
-  font-family: Helvetica;
+  font-family: "Sintony, Arial, sans-serif";
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -7,6 +7,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #F7FAF8;
 }
 article,
 aside,
@@ -331,7 +332,6 @@ hgroup {
   margin-bottom: 1.45rem;
 }
 ul {
-  margin-left: 1.45rem;
   margin-right: 0;
   margin-top: 0;
   padding-bottom: 0;
@@ -617,4 +617,13 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+.table-responsive .table td {
+  text-align: center;
+  vertical-align: middle;
+}
+.table-responsive .table th {
+  text-align: center;
+  vertical-align: middle;
 }
