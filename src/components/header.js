@@ -15,12 +15,16 @@ const Header = ({ siteTitle }) => (
         padding: `1.45rem 1.0875rem`,
         display: `flex`,
         justifyContent: `space-between`,
-        alignItems: `center`
+        alignItems: `center`,
       }}
     >
       <Link to="/">
-      <img width="100px" height="100px"
-      src="//www-league.nhlstatic.com/images/logos/league-dark/133-flat.svg" alt="NHL"></img>
+        <img
+          width="100px"
+          height="100px"
+          src="//www-league.nhlstatic.com/images/logos/league-dark/133-flat.svg"
+          alt="NHL"
+        ></img>
       </Link>
       <h1 className="title" style={{ margin: 0 }}>
         <Link
