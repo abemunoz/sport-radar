@@ -619,6 +619,9 @@ pre tt:after {
   }
 }
 
+.table-responsive .table {
+  margin-bottom: 0;
+}
 .table-responsive .table td {
   text-align: center;
   vertical-align: middle;
@@ -626,4 +629,27 @@ pre tt:after {
 .table-responsive .table th {
   text-align: center;
   vertical-align: middle;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+::-webkit-scrollbar:vertical {
+  width: 10px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, .5);
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;  
+  background-color: #ffffff; 
 }

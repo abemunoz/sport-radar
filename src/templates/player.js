@@ -99,7 +99,7 @@ export default ({
         <table className="table table-hover table-sm">
           <thead>
             <tr className="thead-light">
-              <th colSpan="8">Stats</th>
+              <th colSpan="9">Stats</th>
             </tr>
           </thead>
           {player.primaryPosition.code === "G" ? (

@@ -1,12 +1,16 @@
 const axios = require("axios")
-const get = endpoint =>
-  axios.get(`https://statsapi.web.nhl.com/api/v1/${endpoint}`)
+const axiosRetry = require("axios-retry")
+
+const nhlAPI = axios.create({ baseURL: `https://statsapi.web.nhl.com/api/v1` })
+axiosRetry(nhlAPI, { retries: 5 })
 
 exports.createPages = async ({ actions: { createPage } }) => {
   //  get main team data for home page
+  let response
+  await nhlAPI.get(`/teams`).then(result => (response = result))
   const {
     data: { teams },
-  } = await get(`teams`)
+  } = response
   const eastern = {
     name: "Eastern Conference",
     id: 6,
@@ -81,9 +85,13 @@ exports.createPages = async ({ actions: { createPage } }) => {
 
   //get all team data including rosters
   for (team of teams) {
+    let response
+    await nhlAPI
+      .get(`teams/${team.id}?expand=team.roster`)
+      .then(result => (response = result))
     const {
       data: { teams },
-    } = await get(`teams/${team.id}?expand=team.roster`)
+    } = response
     createPage({
       path: `/teams/${team.id}`,
       component: require.resolve("./src/templates/team.js"),
@@ -94,12 +102,20 @@ exports.createPages = async ({ actions: { createPage } }) => {
     //get all player data
     for (var i = 0; i < teams[0].roster.roster.length; i++) {
       const player = teams[0].roster.roster[i]
+      let playerResponse
+      await nhlAPI
+        .get(`people/${player.person.id}`)
+        .then(result => (playerResponse = result))
       const {
         data: { people },
-      } = await get(`people/${player.person.id}`)
+      } = playerResponse
+      let playerStatResponse
+      await nhlAPI
+        .get(`people/${player.person.id}/stats?stats=yearByYear`)
+        .then(result => (playerStatResponse = result))
       const {
         data: { stats },
-      } = await get(`people/${player.person.id}/stats?stats=yearByYear`)
+      } = playerStatResponse
       createPage({
         path: `/player/${player.person.id}`,
         component: require.resolve("./src/templates/player.js"),
