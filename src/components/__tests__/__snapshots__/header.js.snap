@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<header
+  style={
+    Object {
+      "background": "#000000",
+      "marginBottom": "1rem",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "flex-start",
+        "margin": "0 auto",
+        "padding": "1.45rem 1.0875rem",
+      }
+    }
+  >
+    <a
+      href="/"
+    >
+      <img
+        alt="NHL"
+        height="100px"
+        src="//www-league.nhlstatic.com/images/logos/league-dark/133-flat.svg"
+        style={
+          Object {
+            "color": "white",
+            "paddingRight": "15px",
+            "textDecoration": "none",
+          }
+        }
+        width="100px"
+      />
+    </a>
+    <h1
+      className="title"
+      style={
+        Object {
+          "margin": 0,
+        }
+      }
+    >
+      <a
+        href="/"
+        style={
+          Object {
+            "color": "white",
+            "textDecoration": "none",
+          }
+        }
+      >
+        NHL Radar
+      </a>
+    </h1>
+  </div>
+</header>
+`;
