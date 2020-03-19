@@ -1,5 +1,5 @@
 ## 🏒 NHL Radar 🥅
-- A web app to view current NHL teams and rosters.
+- A responsive web app to view current NHL teams and rosters.
   - Link: https://abemunoz.github.io/sport-radar/
 
 ## 🏃‍♂️How to Run 🏃‍♀️
@@ -13,9 +13,9 @@
   - ```gatsby develop```
 
 ## 🧐 Why Gatsby? 🤔
-We are working with mostly static data so there is no need to fetch data at request time. So instead of waiting to generate pages when requested, the pages are pre-built and ready to be delivered instantly. Once loaded Gatsby also pre-fetches resources for other pages so clicking around the site feels incredibly fast. There are multiple options to refresh your data and pages like running a cron job, React Hydration, and splitting your app to fetch data client side for components that do have dynamic data.
+We are working with mostly static data so there is no need to fetch data at request time. So instead of waiting to generate pages when requested, the pages are pre-built and ready to be delivered instantly. Once loaded, Gatsby also pre-fetches resources for other pages, so clicking around the site feels incredibly fast. There are multiple options to refresh your data and pages, like running a cron job, React Hydration, and splitting your app to fetch data client side for components that do have dynamic data.
 
-Gatsby comes with standard stack that create-react-app but with GraphQL and Gatsby plugins for lazy loading images, responsive images, SEO, and Progressive Web App features among many others. 
+Gatsby comes with the same create-react-app stack but with GraphQL and Gatsby plugins for lazy loading images, responsive images, SEO, and Progressive Web App features among many others. 
 
 These are the lighthouse tests for this web app:
 ###### Desktop LightHouse
